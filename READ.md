@@ -1,0 +1,21 @@
+Sir Umar Sajjid is a dedicated web development instructor with expertise in HTML, CSS, JavaScript, and modern frameworks like React. He combines a clear, practical teaching approach with hands-on projects to equip students with industry-ready skills. Committed to staying current with evolving technologies, he mentors aspiring developers to build functional websites and applications while fostering creativity, problem-solving, and technical proficiency.
+
+
+Miss Ayesha is a creative video editor and animator with expertise in motion graphics, storytelling, and digital content production. She excels at transforming ideas into visually compelling videos that engage and inspire audiences. Skilled in industry-standard tools, she combines technical precision with artistic flair to deliver high-quality, professional content. Committed to staying updated with the latest trends, Miss Ayesha consistently produces work that is both innovative and impactful.
+
+
+Miss Soma Arshad is a talented graphic designer and illustrator specializing in creating visually striking designs and original artwork. She combines creativity with technical expertise to craft compelling visuals that communicate ideas effectively. Skilled in both digital and hand-drawn illustration, she delivers innovative designs that resonate with audiences. Committed to staying current with design trends and tools, Miss Soma consistently produces work that is both professional and imaginative.
+
+Sir Mirza Ehtsham is an accomplished graphic designer and branding expert, specializing in creating impactful visual identities and compelling brand experiences. He blends creativity with strategic thinking to craft designs that resonate with audiences and elevate brand presence. Skilled in both digital and print media, he consistently delivers innovative, high-quality design solutions. Committed to staying ahead of design trends, Sir Mirza ensures every project is visually striking, professional, and aligned with clients’ goals.
+
+
+Sir Hammad Ilyas is a seasoned e-commerce expert specializing in building, optimizing, and scaling online businesses. He combines in-depth market knowledge with strategic insights to drive sales, enhance customer experiences, and maximize digital growth. Skilled in platforms, analytics, and digital marketing, Sir Hammad helps brands transform their online presence into profitable ventures. Committed to staying ahead of e-commerce trends, he delivers innovative solutions that generate measurable results.
+
+
+Sir Talha Saleem is an experienced SEO and digital marketing leader, specializing in driving online growth and brand visibility. He combines strategic insights with data-driven techniques to optimize search performance, increase engagement, and deliver measurable results. Skilled in SEO, content strategy, and digital campaigns, Sir Talha empowers businesses to achieve their marketing goals efficiently. Committed to staying ahead of industry trends, he consistently implements innovative strategies that maximize ROI and strengthen digital presence.
+
+
+Sir Ali Hassan is a skilled video editor with over 5 years of experience creating engaging and high-quality visual content. He specializes in crafting compelling stories through precise editing, motion graphics, and post-production techniques. With a strong eye for detail and a passion for visual storytelling, Sir Ali consistently delivers professional videos that captivate audiences and elevate brand presence.
+
+
+Miss Maryam is a skilled web developer specializing in building responsive, user-friendly websites and web applications. She combines strong technical expertise with a creative approach to deliver efficient, high-quality solutions. Proficient in HTML, CSS, JavaScript, and modern frameworks, Miss Maryam consistently transforms ideas into functional, visually appealing digital experiences. Committed to staying updated with industry trends, she empowers businesses and clients with innovative web solutions that drive engagement and results.
