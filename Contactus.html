@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Keyframes for Fade-in/Fade-up Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Keyframes for Focus Border Effect */
+    @keyframes focusGlow {
+      from { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.4); }
+      to { box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.4); }
+    }
+
+    /* Apply Animation to the entire section (for initial load fade-in) */
+    .contact-section-animate {
+      animation: fadeIn 1s ease-out 0.1s forwards;
+      opacity: 0; 
+    }
+
+    /* Custom Gradient Button Style */
+    .contact-gradient-button {
+      background: linear-gradient(90deg, #14B8A6, #06B6D4); /* Tailwind teal-500 to cyan-500 */
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(20, 184, 166, 0.3);
+    }
+    .contact-gradient-button:hover {
+      background: linear-gradient(90deg, #06B6D4, #14B8A6);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(20, 184, 166, 0.5);
+    }
+    
+    /* Input Field Focus Glow */
+    .contact-input:focus {
+        border-color: #14B8A6; /* Focus border color (Teal) */
+        outline: none;
+        animation: focusGlow 0.3s forwards;
+    }
+    
+    /* Hover effect for contact info items */
+    .contact-info-item:hover {
+        transform: translateX(5px);
+        color: #14B8A6;
+    }
+
+    /* --- CONTACT HEADER STYLES --- */
+    .contact-header {
+      background-image: url('/Assets/Images/Contact/Contact.jpeg'); 
+      background-size: cover;
+      background-position: center 20%; 
+      height: 40vh; 
+      min-height: 250px;
+    }
+    
+    /* Subtle overlay to make text readable */
+    .contact-header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4); 
+    }
+
+    /* Contact Us Text Positioning (Right Lower Corner) - FIX APPLIED HERE */
+    .contact-title {
+      position: absolute;
+      right: 5%; /* Gap from right edge */
+      bottom: 5%; /* Adjusted for a better gap from the bottom edge */
+      z-index: 20; 
+    }
+            /* Fixed icon style */
+        .social-icon-fixed {
+            padding: 0.6rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 
+                        0 2px 4px -2px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: none;
+            width: 42px;
+            height: 42px;
+        }
+
+        .dropdown-menu-smooth {
+        /* Start state: Hidden and no height */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        opacity: 0;
+        visibility: hidden; /* Ensure it doesn't block clicks */
+    }
+
+    /* End state: Visible and full height */
+    .group:hover .dropdown-menu-smooth {
+        max-height: 500px; /* Needs to be larger than max content height */
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Custom style for the mobile menu transition */
+    .mobile-menu {
+        transition: transform 0.3s ease-out;
+        transform: translateX(100%); /* Start off-screen */
+    }
+    
+    .mobile-menu.open {
+        transform: translateX(0); /* Slide in */
+    }
+  </style>
+
+  <title>Contact</title>
+</head>
+<body>
+<header class="bg-white shadow sticky top-0 z-50 reveal">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <a href="#home" class="flex items-center z-20">
+            <img src="Images/logo.png" alt="Bano Qabil" class="h-12">
+            <span class="ml-3 font-bold text-xl text-teal-600">Bano Qabil Sahiwal</span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-6 font-medium">
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Home</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="/Welcome to Bano Qabil.html" class="block px-4 py-2 hover:bg-gray-100">Introduction</a>
+                    <a href="/our-partner.html" class="block px-4 py-2 hover:bg-gray-100">Our Partner</a>
+                    <a href="/Leadership.html" class="block px-4 py-2 hover:bg-gray-100">Leadership</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Faculty</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="courses.html" class="block px-4 py-2 hover:bg-gray-100">Courses</a>
+                    <a href="instructor.html" class="block px-4 py-2 hover:bg-gray-100">Instructor</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Admission</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="Procedure.html" class="block px-4 py-2 hover:bg-gray-100">Procedure</a>
+                    <a href="Admission.html" class="block px-4 py-2 hover:bg-gray-100">Admission Form</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Students</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="Timetable.html" class="block px-4 py-2 hover:bg-gray-100">Time Table</a>
+                    <a href="merit-list.html" class="block px-4 py-2 hover:bg-gray-100">Merit List</a>
+                    <a href="QR-code-attendence/index.html" class="block px-4 py-2 hover:bg-gray-100">Attendance</a>
+                    <a href="#internship" class="block px-4 py-2 hover:bg-gray-100">Internship</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <a href="news-API/index.html">
+
+                      <span>News</span>
+                    </a>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="#location" class="block px-4 py-2 hover:bg-gray-100">Location</a>
+                    <a href="#RegionalBranches" class="block px-4 py-2 hover:bg-gray-100">Regional Branches</a>
+                </div>
+            </div>
+
+            <a href="Contactus.html" class="reveal hover:text-teal-600 transition">Contact</a>
+            <button class="flex items-center gap-1 reveal hover:text-black transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <a href="Login.html">Login</a>
+            </button>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-teal-600 z-20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 pt-20 md:hidden z-10">
+        <div class="space-y-4 font-medium">
+            <a href="#home" class="block hover:text-teal-600">Home</a>
+            <a href="courses.html" class="block hover:text-teal-600">Courses</a>
+            <a href="instructor.html" class="block hover:text-teal-600">Faculty</a>
+            <a href="Admission.html" class="block hover:text-teal-600">Admission</a>
+            <a href="Timetable.html" class="block hover:text-teal-600">Students</a>
+            <a href="news-API/index.html" class="block hover:text-teal-600">News</a>
+            <a href="Contactus.html" class="block hover:text-teal-600">Contact</a>
+            <a href="Login.html" class="block bg-teal-600 text-white text-center py-2 rounded">Login</a>
+        </div>
+    </nav>
+</header>
+
+<section id="/Contact-Us">
+    <header class="contact-header relative overflow-hidden h-[40vh] md:h-[50vh] flex items-center justify-center">
+
+        <div class="absolute inset-0">
+            <img src="https://www.shutterstock.com/image-photo/using-laptop-show-icon-address-600nw-2521386695.jpg" 
+                 alt="Professional support and communication background image"
+                 class="w-full h-full object-cover">
+        </div>
+
+        <div class="absolute inset-0 bg-primary-blue opacity-70"></div>
+        
+        <div class="contact-title relative z-10 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-wide">
+                Contact Us
+            </h1>
+        </div>
+    </header>
+    
+    </section>
+
+
+<section class="bg-white py-16 md:py-24 contact-section-animate">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-start">
+
+        <div class="space-y-8 pr-8">
+            <h2 class="text-4xl font-bold text-gray-900">Let's talk with us</h2>
+            <p class="text-gray-600 text-lg">
+                Join Bano Qabil and get skilled to dominate the tech world.
+            </p>
+
+            <div class="space-y-4 text-gray-700">
+                <div class="flex items-start contact-info-item transition duration-300">
+                    <svg class="w-6 h-6 mr-3 mt-1 text-teal-500 The class `shrink-0`" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a6 6 0 00-6 6c0 1.25.3 2.45.87 3.48l5.13 6.92 5.13-6.92A6 6 0 0010 2zm0 8a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>**House 137, Fateh Sher Colony, Sahiwal, 57000**</span>
+                </div>
+
+                <div class="flex items-center contact-info-item transition duration-300">
+                    <svg class="w-6 h-6 mr-3 text-teal-500 The class  `shrink-0`" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 00-1 1v12a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1H2zm0 2v10h16V5H2z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                        <path d="M13 7a1 1 0 00-1 1v2a1 1 0 002 0V8a1 1 0 00-1-1zM7 7a1 1 0 00-1 1v2a1 1 0 002 0V8a1 1 0 00-1-1zM10 7a1 1 0 00-1 1v2a1 1 0 002 0V8a1 1 0 00-1-1z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                    </svg>
+                    <span>+92 328 8888515</span>
+                </div>
+
+                <div class="flex items-center contact-info-item transition duration-300">
+                    <svg class="w-6 h-6 mr-3 text-teal-500 `shrink-0`" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    <span>info@alkhidmat.org</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl transition duration-500 hover:shadow-teal-500/30">
+            <form action="#" method="POST" class="space-y-6">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name*" required
+                           class="contact-input block w-full py-3 px-4 border border-gray-300 rounded-md shadow-sm transition">
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name*" required
+                           class="contact-input block w-full py-3 px-4 border border-gray-300 rounded-md shadow-sm transition">
+                </div>
+                
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email*" required
+                           class="contact-input block w-full py-3 px-4 border border-gray-300 rounded-md shadow-sm transition">
+                </div>
+                
+                <div>
+                    <input type="tel" name="phone_number" id="phone_number" placeholder="Phone Number*"
+                           class="contact-input block w-full py-3 px-4 border border-gray-300 rounded-md shadow-sm transition">
+                </div>
+
+                <div>
+                    <textarea name="message" id="message" rows="4" placeholder="Your message..."
+                              class="contact-input block w-full py-3 px-4 border border-gray-300 rounded-md shadow-sm transition"></textarea>
+                </div>
+
+                <button type="submit"
+                        class="contact-gradient-button text-white font-semibold py-3 px-6 rounded-md w-full text-lg">
+                        Send Message
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-5xl font-extrabold text-[#14B8A6] tracking-wide">
+        BANO QABIL
+      </h2>
+      <div class="w-24 h-1 bg-[#14B8A6] mx-auto mt-3"></div>
+      <p class="text-xl mt-4 text-gray-700 font-medium">
+        Sahiwal Campus Location
+      </p>
+    </div>
+
+    <!-- Map Card -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> 
+
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden border border-gray-200">
+        
+        <div class="w-full h-full pb-[56.25%] relative">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3620.0000000000005!2d73.1000000!3d30.6667000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                class="absolute top-0 left-0 w-full h-full border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+</div>
+
+      <!-- Description -->
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">Bano Qabil – Sahiwal Center</h3>
+        <p class="text-gray-600 text-lg">
+          Use the interactive map above to find our official Bano Qabil Sahiwal campus.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+ 
+  <!-- Footer Section -->
+    <footer class="bg-gray-100 pt-14 pb-7 mt-20">
+        <h2 class="sr-only">Bano Qabil Footer Navigation</h2>
+
+        <!-- Responsive Grid -->
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+            <!-- Logo + About -->
+            <section>
+                <img src="Images/footer.png" alt="Bano Qabil Logo" class="h-14 mb-4">
+                <p class="text-gray-600 mb-4">
+                    Join Bano Qabil and get skilled to dominate the tech world.
+                </p>
+
+                <address class="not-italic space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-envelope text-gray-600 w-4"></i>
+                        <a href="mailto:info@alkhidmat.org" class="text-gray-700">info@alkhidmat.org</a>
+                    </div>
+
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-phone-alt text-gray-600 w-4"></i>
+                        <a href="tel:+923288888515" class="text-gray-700">+92 328 8888515</a>
+                    </div>
+                </address>
+            </section>
+
+            <!-- Quick Links -->
+            <nav aria-labelledby="quick-links-heading">
+                <h3 id="quick-links-heading" class="font-semibold text-gray-800 mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="transition-none">About</a></li>
+                    <li><a href="#" class="transition-none">Administration</a></li>
+                    <li><a href="#" class="transition-none">Faculty</a></li>
+                    <li><a href="#" class="transition-none">Admission</a></li>
+                    <li><a href="Contactus.html" class="transition-none">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contact -->
+            <section>
+                <h3 class="font-semibold text-gray-800 mb-3">Contact</h3>
+
+                <address class="not-italic space-y-3">
+                    <p class="text-gray-600 mb-1">
+                        House 137, Fateh Sher Colony, Sahiwal, 57000
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-phone-alt text-gray-600 w-4"></i>
+                        <a href="tel:+923350800911" class="text-gray-700">+92 335 0800911</a>
+                    </div>
+                </address>
+            </section>
+
+            <!-- Legal -->
+            <nav aria-labelledby="legal-links-heading">
+                <h3 id="legal-links-heading" class="font-semibold text-gray-800 mb-3">Legal</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="transition-none">Privacy Policy</a></li>
+                    <li><a href="#" class="transition-none">Terms of Service</a></li>
+                    <li><a href="#" class="transition-none">Cookies Setting</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-end space-x-3 mt-10 px-6 max-w-7xl mx-auto animate-fadeSlideUp">
+
+            <a href="https://www.facebook.com/BanoQabil" target="_blank" aria-label="Facebook"
+                class="bg-blue-600 text-white social-icon-fixed">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/BanoQabil" target="_blank" aria-label="Instagram"
+                class="bg-pink-500 text-white social-icon-fixed">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@BanoQabil" target="_blank" aria-label="YouTube"
+                class="bg-red-600 text-white social-icon-fixed">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="https://twitter.com/BanoQabil" target="_blank" aria-label="Twitter"
+                class="bg-blue-400 text-white social-icon-fixed">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/company/BanoQabil" target="_blank" aria-label="LinkedIn"
+                class="bg-blue-700 text-white social-icon-fixed">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+        <hr class="my-8 border-gray-300 max-w-7xl mx-auto">
+
+        <!-- Copyright -->
+        <p class="text-center text-gray-600 text-sm">
+            © 2025, All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bano Qabil Course Timetable</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Time Table */
+    /* Bano Qabil button color */
+    .bq-btn {
+      background-color: #008C76;
+    }
+    .bq-btn:hover {
+      background-color: #008C76;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Header -->
+       <!-- /* Time Table -->
+  <header class="bg-white shadow py-4 mb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-3xl font-bold text-gray-800 text-center">Bano Qabil Course Timetable</h1>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 mb-12">
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white rounded-lg shadow-lg overflow-hidden">
+        <thead class="bg-[#00A651] text-white">
+          <tr>
+            <th class="py-3 px-6 text-left">Course Name</th>
+            <th class="py-3 px-6 text-left">Days</th>
+            <th class="py-3 px-6 text-left">Timing</th>
+            <th class="py-3 px-6 text-left">Students</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+
+          <!-- Course Row -->
+          <tr class="hover:bg-gray-100 transition-colors">
+            <td class="py-3 px-6">Basics of Computer</td>
+            <td class="py-3 px-6">Mon, Wed,</td>
+            <td class="py-3 px-6">10:00 AM - 1:00 PM</td>
+            <td class="py-3 px-6">
+              <button onclick="toggleStudents('basics')" class="bq-btn text-white px-3 py-1 rounded transition-colors">
+                View Students
+              </button>
+            </td>
+          </tr>
+          <tr id="basics" class="hidden bg-gray-50">
+            <td colspan="4" class="py-2 px-6">
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Ali Khan</li>
+                <li>Sara Ahmed</li>
+                <li>Usman Iqbal</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Web Development -->
+          <tr class="hover:bg-gray-100 transition-colors">
+            <td class="py-3 px-6">Web Development</td>
+            <td class="py-3 px-6">Mon, Wed,</td>
+            <td class="py-3 px-6">10:00 AM - 1:00 PM</td>
+            <td class="py-3 px-6">
+              <button onclick="toggleStudents('webdev')" class="bq-btn text-white px-3 py-1 rounded transition-colors">
+                View Students
+              </button>
+            </td>
+          </tr>
+          <tr id="webdev" class="hidden bg-gray-50">
+            <td colspan="4" class="py-2 px-6">
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Ali Khan</li>
+                <li>Sara Ahmed</li>
+                <li>Usman Iqbal</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Graphic Design -->
+          <tr class="hover:bg-gray-100 transition-colors">
+            <td class="py-3 px-6">Graphic Design</td>
+            <td class="py-3 px-6">Tue, Thu</td>
+            <td class="py-3 px-6">2:00 PM - 5:00 PM</td>
+            <td class="py-3 px-6">
+              <button onclick="toggleStudents('graphic')" class="bq-btn text-white px-3 py-1 rounded transition-colors">
+                View Students
+              </button>
+            </td>
+          </tr>
+          <tr id="graphic" class="hidden bg-gray-50">
+            <td colspan="4" class="py-2 px-6">
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Ayesha Tariq</li>
+                <li>Imran Raza</li>
+                <li>Zainab Malik</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Digital Marketing -->
+          <tr class="hover:bg-gray-100 transition-colors">
+            <td class="py-3 px-6">Digital Marketing</td>
+            <td class="py-3 px-6">Mon, Thu</td>
+            <td class="py-3 px-6">3:00 PM - 6:00 PM</td>
+            <td class="py-3 px-6">
+              <button onclick="toggleStudents('marketing')" class="bq-btn text-white px-3 py-1 rounded transition-colors">
+                View Students
+              </button>
+            </td>
+          </tr>
+          <tr id="marketing" class="hidden bg-gray-50">
+            <td colspan="4" class="py-2 px-6">
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Farhan Ali</li>
+                <li>Hina Shah</li>
+                <li>Kamran Javed</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Video Editing and Animations -->
+          <tr class="hover:bg-gray-100 transition-colors">
+            <td class="py-3 px-6">Video Editing and Animations</td>
+            <td class="py-3 px-6">Wed, Fri</td>
+            <td class="py-3 px-6">10:00 AM - 1:00 PM</td>
+            <td class="py-3 px-6">
+              <button onclick="toggleStudents('python')" class="bq-btn text-white px-3 py-1 rounded transition-colors">
+                View Students
+              </button>
+            </td>
+          </tr>
+          <tr id="python" class="hidden bg-gray-50">
+            <td colspan="4" class="py-2 px-6">
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Bilal Ahmed</li>
+                <li>Hina Malik</li>
+                <li>Ali Raza</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Digital Marketing -->
+          <tr class="hover:bg-gray-100 transition-colors">
+            <td class="py-3 px-6">Digital Marketing</td>
+            <td class="py-3 px-6">Tue, Thu</td>
+            <td class="py-3 px-6">11:00 AM - 2:00 PM</td>
+            <td class="py-3 px-6">
+              <button onclick="toggleStudents('uiux')" class="bq-btn text-white px-3 py-1 rounded transition-colors">
+                View Students
+              </button>
+            </td>
+          </tr>
+          <tr id="uiux" class="hidden bg-gray-50">
+            <td colspan="4" class="py-2 px-6">
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Sara Khan</li>
+                <li>Usman Tariq</li>
+                <li>Zainab Ali</li>
+              </ul>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+<p class="bg-[#00A651] text-white text-center py-2 rounded block w-full">
+  Friday Off
+</p>
+  </main>
+
+  <script>
+    //     /* Time Table
+    function toggleStudents(id) {
+      const row = document.getElementById(id);
+      row.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<think>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bano Qabil - Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+    
+    <div class="my-16">
+ 
+    
+
+<!-- signup form -->
+
+  <!-- BG Shapes -->
+  <div class="corner-shape left-5 top-10 bg-white/30"></div>
+  <div class="corner-shape right-10 top-20 bg-white/20 rotate-12"></div>
+
+  <!-- CARD -->
+  <main class="w-full max-w-md mx-auto">
+    <section class="bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl px-8 py-10 md:px-12 md:py-12 
+   transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+
+
+      <h1 class="text-3xl font-extrabold text-center mb-8 tracking-tight">Sign Up</h1>
+
+      <form id="signupForm" class="space-y-7" onsubmit="event.preventDefault(); handleSubmit();">
+
+        <!-- USERNAME -->
+        <div>
+          <label class="text-sm text-gray-500 block mb-2">Username</label>
+          <div class="flex items-center gap-3 group">
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                d="M16 11a4 4 0 10-8 0 4 4 0 008 0zM3 20a9 9 0 0118 0" />
+            </svg>
+            <input type="text" id="username" placeholder="Type your username"
+              class="flex-1 input-underline py-2 outline-none text-sm text-gray-800 placeholder-gray-400 transition focus:text-indigo-600">
+          </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div>
+          <label class="text-sm text-gray-500 block mb-2">Email</label>
+          <div class="flex items-center gap-3 group">
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <input type="email" id="email" placeholder="Type your email"
+              class="flex-1 input-underline py-2 outline-none text-sm text-gray-800 placeholder-gray-400 transition focus:text-indigo-600">
+          </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div>
+          <label class="text-sm text-gray-500 block mb-2">Password</label>
+          <div class="flex items-center gap-3 group">
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                d="M12 11V7a4 4 0 10-8 0v4M4 11h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z" />
+            </svg>
+            <input type="password" id="password" placeholder="Type your password"
+              class="flex-1 input-underline py-2 outline-none text-sm text-gray-800 placeholder-gray-400 transition focus:text-indigo-600">
+            <button type="button" id="pwToggle" class="p-1 text-gray-500 hover:text-indigo-600 transition">
+              <svg id="eyeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CONFIRM PASSWORD -->
+        <div>
+          <label class="text-sm text-gray-500 block mb-2">Confirm Password</label>
+          <div class="flex items-center gap-3 group">
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-500 transition" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                d="M12 11V7a4 4 0 10-8 0v4M4 11h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z" />
+            </svg>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password"
+              class="flex-1 input-underline py-2 outline-none text-sm text-gray-800 placeholder-gray-400 transition focus:text-indigo-600">
+            <button type="button" id="confirmPwToggle" class="p-1 text-gray-500 hover:text-indigo-600 transition">
+              <svg id="confirmEyeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- SIGN UP BUTTON -->
+        <button type="submit" class="w-full py-3 rounded-full text-white font-semibold text-sm shadow-md
+                 bg-gradient-to-r from-cyan-400 via-indigo-500 to-pink-500 
+                 transition hover:shadow-xl hover:brightness-110 active:scale-95">
+          SIGN UP
+        </button>
+
+        <!-- SOCIAL -->
+        <p class="text-center text-sm text-gray-500 mt-4">Or Sign Up Using</p>
+
+        <div class="flex justify-center gap-5">
+          <!-- facebook -->
+          <button class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center
+                         hover:scale-110 hover:shadow-lg transition">
+            <svg class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07C2 17.09 5.66 21.2 10.44 22v-7.03H7.9v-2.9h2.55V9.4c0-2.52 1.5-3.9 3.79-3.9 1.1 0 2.25.2 2.25.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22C18.34 21.2 22 17.09 22 12.07z" />
+            </svg>
+          </button>
+
+          <!-- twitter -->
+          <button class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center
+                         hover:scale-110 hover:shadow-lg transition">
+            <svg class="w-5 h-5 text-sky-500" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 5.92c-.64.29-1.32.49-2.04.58a3.56 3.56 0 001.56-1.97 7.1 7.1 0 01-2.26.86 3.54 3.54 0 00-6.03 3.23A10.04 10.04 0 013 4.67a3.54 3.54 0 001.09 4.73 3.48 3.48 0 01-1.6-.44v.04a3.54 3.54 0 002.84 3.47c-.47.13-.97.16-1.49.06a3.54 3.54 0 003.3 2.46A7.1 7.1 0 012 19.54 10.02 10.02 0 007.29 21c6.14 0 9.5-5.1 9.5-9.51v-.43A6.78 6.78 0 0022 5.92z" />
+            </svg>
+          </button>
+
+          <!-- google -->
+          <button class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center
+                         hover:scale-110 hover:shadow-lg transition">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+              <path fill="#EA4335"
+                d="M21.35 11.1h-9.32v2.9h5.34c-.23 1.46-1.33 3.36-3.1 4.24-1.78.89-4.04 1-6.12.23-2.08-.76-3.55-2.61-3.9-4.77-.36-2.16.23-4.48 1.58-6.02C7.42 5.09 9.91 4 12.64 4c1.82 0 3.2.45 4.2 1.06l-1.89 1.89C13.7 6.5 12.25 6.1 11 6.1c-2.76 0-5.14 1.62-6.23 3.98-1.07 2.36-.6 5.12 1.2 6.72 1.78 1.59 4.67 1.96 7.07 1.14 2.4-.82 3.98-2.86 4.32-4.44h-4.32v-2.9h9.32v-.01z" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="text-center mt-6">
+          <p class="text-sm text-gray-500">Already have an account?</p>
+          <a href="Login.html" class="text-sm font-medium text-gray-700 hover:text-indigo-700 hover:underline transition">SIGN IN</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  </div>
+
+</body>
+</html>

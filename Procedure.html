@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bano Qabil Book Effect</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    /* // procedure */
+  /* BOOK CONTAINER */
+  .book-container {
+    perspective: 2000px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* PAGE */
+  .book-page {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform 1s ease, z-index 0s linear 1s;
+    cursor: pointer;
+  }
+
+  .book-page img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  /* FRONT & BACK */
+  .page-front, .page-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .page-front {
+    background-color: white;
+    z-index: 2;
+  }
+
+  .page-back {
+    background-color: #f0fdf4;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  /* FLIPPED STATE */
+  .book-page.flipped {
+    transform: rotateY(-180deg);
+    z-index: 0 !important;
+    transition: transform 1s ease;
+  }
+
+  /* SHADOW ON HOVER */
+  .book-page:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- // procedure -->
+<section class="py-24">
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-extrabold text-gray-800">Procedure to <span class="text-teal-600">Bano Qabil</span></h1>
+    <p class="text-xl text-gray-600 mt-4">Click pages to flip like a real book and explore each step.</p>
+  </div>
+
+  <!-- Book Container -->
+  <div class="book-container">
+
+    <!-- Page 1: Registration -->
+    <div class="book-page z-5">
+      <div class="page-front flex flex-col">
+        <img src="/Assets/Images/Procedure/Registration.jpeg" alt="Registration">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Registration</h3>
+          <p class="text-gray-600">Fill out your application and choose the desired IT course. Submit all required details.</p>
+        </div>
+      </div>
+      <div class="page-back">
+        <p class="text-gray-800 text-center">Make sure all fields are correct. Next: Aptitude Test.</p>
+      </div>
+    </div>
+
+    <!-- Page 2: Aptitude Test -->
+    <div class="book-page z-4">
+      <div class="page-front flex flex-col">
+        <img src="/Assets/Images/Procedure/Test.jpeg" alt="Aptitude Test">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Aptitude Test</h3>
+          <p class="text-gray-600">Evaluate basic computer skills and reasoning. Good performance is required to advance.</p>
+        </div>
+      </div>
+      <div class="page-back">
+        <p class="text-gray-800 text-center">Passed? You’ll be called for the interview stage.</p>
+      </div>
+    </div>
+
+    <!-- Page 3: Interview -->
+    <div class="book-page z-3">
+      <div class="page-front flex flex-col">
+        <img src="/Assets/Images/Procedure/interview.jpeg" alt="Interview">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Interview</h3>
+          <p class="text-gray-600">Assess motivation and commitment. Ensure candidate is serious for intensive IT training.</p>
+        </div>
+      </div>
+      <div class="page-back">
+        <p class="text-gray-800 text-center">Prepare answers about goals and prior experience.</p>
+      </div>
+    </div>
+
+    <!-- Page 4: Classes -->
+    <div class="book-page z-2">
+      <div class="page-front flex flex-col">
+        <img src="/Assets/Images/Procedure/Classes.jpeg" alt="Classes">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Classes</h3>
+          <p class="text-gray-600">Attend certified in-person training by expert instructors focusing on practical IT skills.</p>
+        </div>
+      </div>
+      <div class="page-back">
+        <p class="text-gray-800 text-center">Course lasts 3-4 months. Focus on hands-on learning.</p>
+      </div>
+    </div>
+
+    <!-- Page 5: Graduation -->
+    <div class="book-page z-1">
+      <div class="page-front flex flex-col">
+        <img src="/Assets/Images/Procedure/Graduation.jpeg" alt="Graduation">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Graduation</h3>
+          <p class="text-gray-600">Complete assignments and exams to earn a certificate marking readiness for professional IT work.</p>
+        </div>
+      </div>
+      <div class="page-back">
+        <p class="text-gray-800 text-center">Celebrate your achievement and start your IT career journey!</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // procedure
+const pages = document.querySelectorAll('.book-page');
+
+pages.forEach((page, index) => {
+  page.style.zIndex = pages.length - index;  
+
+  page.addEventListener('click', () => {
+    page.classList.toggle('flipped');
+
+    if (page.classList.contains('flipped')) {
+      page.style.zIndex = 0;
+    } else {
+      page.style.zIndex = pages.length - index;
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

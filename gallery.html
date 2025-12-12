@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bano Qabil Gallery</title>
+
+    <!-- ⚡ Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .gallery-img {
+            transition: transform .35s ease, box-shadow .35s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+                /* Fixed icon style */
+        .social-icon-fixed {
+            padding: 0.6rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 
+                        0 2px 4px -2px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: none;
+            width: 42px;
+            height: 42px;
+        }
+
+        .dropdown-menu-smooth {
+        /* Start state: Hidden and no height */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        opacity: 0;
+        visibility: hidden; /* Ensure it doesn't block clicks */
+    }
+
+    /* End state: Visible and full height */
+    .group:hover .dropdown-menu-smooth {
+        max-height: 500px; /* Needs to be larger than max content height */
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Custom style for the mobile menu transition */
+    .mobile-menu {
+        transition: transform 0.3s ease-out;
+        transform: translateX(100%); /* Start off-screen */
+    }
+    
+    .mobile-menu.open {
+        transform: translateX(0); /* Slide in */
+    }
+    </style>
+</head>
+
+<body style="background:white" class="min-h-screen">
+
+    <header class="bg-white shadow sticky top-0 z-50 reveal">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <a href="#home" class="flex items-center z-20">
+            <img src="Images/logo.png" alt="Bano Qabil" class="h-12">
+            <span class="ml-3 font-bold text-xl text-teal-600">Bano Qabil Sahiwal</span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-6 font-medium">
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Home</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="/Welcome to Bano Qabil.html" class="block px-4 py-2 hover:bg-gray-100">Introduction</a>
+                    <a href="/our-partner.html" class="block px-4 py-2 hover:bg-gray-100">Our Partner</a>
+                    <a href="/Leadership.html" class="block px-4 py-2 hover:bg-gray-100">Leadership</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Faculty</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="courses.html" class="block px-4 py-2 hover:bg-gray-100">Courses</a>
+                    <a href="instructor.html" class="block px-4 py-2 hover:bg-gray-100">Instructor</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Admission</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="Procedure.html" class="block px-4 py-2 hover:bg-gray-100">Procedure</a>
+                    <a href="Admission.html" class="block px-4 py-2 hover:bg-gray-100">Admission Form</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Students</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="Timetable.html" class="block px-4 py-2 hover:bg-gray-100">Time Table</a>
+                    <a href="merit-list.html" class="block px-4 py-2 hover:bg-gray-100">Merit List</a>
+                    <a href="QR-code-attendence/index.html" class="block px-4 py-2 hover:bg-gray-100">Attendance</a>
+                    <a href="#internship" class="block px-4 py-2 hover:bg-gray-100">Internship</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <a href="news-API/index.html">
+
+                      <span>News</span>
+                    </a>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="#location" class="block px-4 py-2 hover:bg-gray-100">Location</a>
+                    <a href="#RegionalBranches" class="block px-4 py-2 hover:bg-gray-100">Regional Branches</a>
+                </div>
+            </div>
+
+            <a href="Contactus.html" class="reveal hover:text-teal-600 transition">Contact</a>
+            <button class="flex items-center gap-1 reveal hover:text-black transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <a href="Login.html">Login</a>
+            </button>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-teal-600 z-20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 pt-20 md:hidden z-10">
+        <div class="space-y-4 font-medium">
+            <a href="#home" class="block hover:text-teal-600">Home</a>
+            <a href="courses.html" class="block hover:text-teal-600">Courses</a>
+            <a href="instructor.html" class="block hover:text-teal-600">Faculty</a>
+            <a href="Admission.html" class="block hover:text-teal-600">Admission</a>
+            <a href="Timetable.html" class="block hover:text-teal-600">Students</a>
+            <a href="news-API/index.html" class="block hover:text-teal-600">News</a>
+            <a href="Contactus.html" class="block hover:text-teal-600">Contact</a>
+            <a href="Login.html" class="block bg-teal-600 text-white text-center py-2 rounded">Login</a>
+        </div>
+    </nav>
+</header>
+
+    <div class="max-w-6xl mx-auto p-6">
+
+      
+
+        <!--  Gallery -->
+  <!--  BANO QABIL LOGO -->
+        <div class="flex justify-left mb-6 gap-x-60">
+            <img src="Images/footer.png" alt="BanoQabil Logo" class="h-24 drop-shadow-lg">
+        
+
+        <Gallery class="text-center text-[#5AA79F] mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-wide drop-shadow">
+                BANO QABIL GALLERY
+            </h1>
+
+            <div class="w-32 mx-auto mt-3 border-b-4 border-white rounded-full"></div>
+
+            <p class="mt-3 text-lg font-light drop-shadow">
+                Learn • Explore • Build • Transform
+            </p>
+
+           
+        </header></div>
+
+        <!-- ⭐ Masonry Gallery -->
+        <div class="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4" id="gallery">
+            <img loading="lazy" src="https://banoqabil.org/org_images/punjab.png"
+            
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/sindh.png"
+
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/balochistan.png"
+            
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/khyber_pukhtoon_khua.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/gilgit.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/kashmir.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/islamabad.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+             <div class="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4" id="gallery">
+            <img loading="lazy" src="https://banoqabil.org/org_images/punjab.png"
+            
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/sindh.png"
+
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/balochistan.png"
+            
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/khyber_pukhtoon_khua.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/gilgit.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/kashmir.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+            <img loading="lazy" src="https://banoqabil.org/org_images/islamabad.png"
+                class="w-full rounded-lg shadow gallery-img cursor-pointer">
+
+        </div>
+
+    </div>
+
+    <!-- ⭐ Modal Slideshow -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
+        <span id="closeModal" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+
+        <button id="prevBtn" class="absolute left-4 md:left-16 text-white text-4xl font-bold">&#10094;</button>
+
+        <img id="modalImg" class="max-h-[85vh] max-w-[90vw] rounded-lg shadow-lg">
+
+        <button id="nextBtn" class="absolute right-4 md:right-16 text-white text-4xl font-bold">&#10095;</button>
+    </div>
+
+    <!-- ⭐ JS -->
+    <script>
+         /* PAGE LOADER */
+        window.addEventListener("load", () => {
+            setTimeout(() => document.getElementById("loader").style.display = "none", 600);
+        });
+
+        /* RANDOMIZE GALLERY ORDER */
+        const gallery = document.getElementById("gallery");
+        const imgs = Array.from(gallery.children);
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        shuffle(imgs).forEach(img => gallery.appendChild(img));
+
+        /* SLIDESHOW */
+        const images = Array.from(document.querySelectorAll(".gallery-img"));
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modalImg");
+        let currentIndex = 0;
+
+        images.forEach((img, i) => {
+            img.addEventListener("click", () => {
+                modal.classList.remove("hidden");
+                modalImg.src = img.src;
+                currentIndex = i;
+            });
+        });
+
+        document.getElementById("closeModal").onclick = () => modal.classList.add("hidden");
+        modal.onclick = e => { if (e.target === modal) modal.classList.add("hidden"); };
+
+        document.getElementById("nextBtn").onclick = () => showSlide(currentIndex + 1);
+        document.getElementById("prevBtn").onclick = () => showSlide(currentIndex - 1);
+
+        function showSlide(i) {
+            currentIndex = (i + images.length) % images.length;
+            modalImg.src = images[currentIndex].src;
+        }
+
+        document.addEventListener("keydown", (e) => {
+            if (modal.classList.contains("hidden")) return;
+            if (e.key === "ArrowRight") showSlide(currentIndex + 1);
+            if (e.key === "ArrowLeft") showSlide(currentIndex - 1);
+            if (e.key === "Escape") modal.classList.add("hidden");
+        });
+</script>
+</body>
+
+</html>

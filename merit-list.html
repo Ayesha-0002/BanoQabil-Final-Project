@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Merit List</title>
+
+  <style>
+    :root {
+      --theme: #008C76;
+    }
+
+    .section-card {
+      transition: 0.3s ease;
+      border-left: 6px solid var(--theme);
+    }
+    .section-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 140, 118, 0.25);
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+<!-- SEARCH BAR -->
+<div class="max-w-5xl mx-auto p-6 mt-6 fade-in">
+  <h1 class="text-4xl font-bold text-center mb-6" style="color: var(--theme)">Merit List</h1>
+  <input id="searchInput" type="text" placeholder="Search by Student Name or ID..." 
+         class="w-full p-3 border rounded-md shadow focus:outline-none focus:ring" />
+</div>
+
+<!-- 9 COURSE SECTIONS -->
+<div id="coursesContainer" class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+  <script>
+    const courses = [
+      "Web Development", "E-Commerce Development", "Graphic Design", "Video Editing", "Basics of Computer",
+      "SEO", "Freelancing", "Digital Marketing", "AI & ChatGPT"
+    ];
+
+    const dummyStudents = [
+      { id: "ST1001", name: "Ali Khan", day: "Mon-Wed", time: "3:00 PM", instructor: "Mr. Ahsan" },
+      { id: "ST1002", name: "Sara Ahmed", day: "Tue-Thu", time: "11:00 AM", instructor: "Ms. Zoya" },
+      { id: "ST1003", name: "Hamza Tariq", day: "Mon-Wed", time: "1:00 PM", instructor: "Mr. Bilal" },
+      { id: "ST1004", name: "Ayesha Noor", day: "Fri-Sat", time: "9:00 AM", instructor: "Ms. Mehwish" }
+    ];
+
+    const container = document.getElementById("coursesContainer");
+
+    courses.forEach((course, index) => {
+      const section = document.createElement("div");
+      section.className = "section-card bg-white p-6 rounded-lg shadow fade-in";
+      section.style.animationDelay = `${index * 0.1}s`;
+
+      let tableRows = dummyStudents.map(std => `
+        <tr class="border-b hover:bg-gray-100 transition">
+          <td class="p-2">${std.id}</td>
+          <td class="p-2">${std.name}</td>
+          <td class="p-2">${std.day}</td>
+          <td class="p-2">${std.time}</td>
+          <td class="p-2">${std.instructor}</td>
+        </tr>
+      `).join("");
+
+      section.innerHTML = `
+        <h2 class="text-2xl font-bold mb-4" style="color: var(--theme)">${course}</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border">
+            <thead style="background: var(--theme); color: white;">
+              <tr>
+                <th class="p-2">Student ID</th>
+                <th class="p-2">Name</th>
+                <th class="p-2">Day</th>
+                <th class="p-2">Time</th>
+                <th class="p-2">Instructor</th>
+              </tr>
+            </thead>
+            <tbody class="searchable">
+              ${tableRows}
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      container.appendChild(section);
+    });
+
+    // SEARCH FUNCTION
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+      const filter = this.value.toLowerCase();
+      const sections = document.querySelectorAll(".searchable tr");
+
+      sections.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
+
+</div>
+
+</body>
+</html>

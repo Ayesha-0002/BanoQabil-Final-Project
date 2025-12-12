@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bano Qabil - Admission Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<header>
+  <!-- Paste navbar code here or include via iframe/server side include -->
+</header>
+
+<!-- Admission Form Section -->
+<main class="w-full max-w-lg mx-auto py-20">
+  <section class="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl px-8 py-10 md:px-12 md:py-12 
+                  transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+
+    <h1 class="text-3xl font-extrabold text-center mb-8 tracking-tight text-teal-600">Admission Form</h1>
+
+    <form id="admissionForm" class="space-y-7" onsubmit="event.preventDefault(); handleAdmissionSubmit();">
+
+      <!-- Full Name -->
+      <div>
+        <label class="text-sm text-gray-600 block mb-2">Full Name</label>
+        <div class="flex items-center gap-3 group">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-teal-500 transition" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24">
+            <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M16 11a4 4 0 10-8 0 4 4 0 008 0zM3 20a9 9 0 0118 0" />
+          </svg>
+          <input type="text" id="fullname" placeholder="Enter full name"
+                 class="flex-1 input-underline py-2 outline-none text-sm text-gray-800 placeholder-gray-400 transition">
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="text-sm text-gray-600 block mb-2">Email</label>
+        <div class="flex items-center gap-3 group">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-teal-500 transition" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 8l9 6 9-6M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
+          </svg>
+          <input type="email" id="email" placeholder="Enter email address"
+                 class="flex-1 input-underline py-2 outline-none text-sm text-gray-800 placeholder-gray-400 transition">
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label class="text-sm text-gray-600 block mb-2">Phone Number</label>
+        <div class="flex items-center gap-3 group">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-teal-500 transition" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 5l2-2h14l2 2v14l-2 2H5l-2-2V5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M16 11a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <input type="tel" id="phone" placeholder="Enter phone number"
+                 class="flex-1 input-underline py-2 outline-none text-sm text-gray-800 placeholder-gray-400 transition">
+        </div>
+      </div>
+
+      <!-- Qualification Section -->
+      <div class="mt-8">
+        <h2 class="text-lg font-semibold text-gray-700 mb-4">Qualification Details</h2>
+
+        <!-- Highest Qualification -->
+        <div class="mb-6">
+          <label class="text-sm text-gray-600 mb-2 block">Highest Qualification</label>
+          <select
+            class="w-full p-3 bg-white border border-gray-300 rounded-lg text-sm focus:border-[#14B8A6] focus:ring-[#14B8A6] transition">
+            <option>Select qualification</option>
+            <option>High School (10th)</option>
+            <option>Intermediate (12th)</option>
+            <option>Diploma</option>
+            <option>Undergraduate (UG)</option>
+            <option>Postgraduate (PG)</option>
+            <option>PhD</option>
+          </select>
+        </div>
+
+        <!-- School / College Name -->
+        <div class="mb-6">
+          <label class="text-sm text-gray-600 mb-2 block">School / College Name</label>
+          <input type="text"
+                 class="w-full p-3 bg-white border border-gray-300 rounded-lg text-sm focus:border-[#14B8A6] focus:ring-[#14B8A6] transition"
+                 placeholder="Enter institution name">
+        </div>
+
+        <!-- Year of Passing -->
+        <div class="mb-6">
+          <label class="text-sm text-gray-600 mb-2 block">Year of Passing</label>
+          <input type="number"
+                 class="w-full p-3 bg-white border border-gray-300 rounded-lg text-sm focus:border-[#14B8A6] focus:ring-[#14B8A6] transition"
+                 placeholder="YYYY" min="1900" max="2099">
+        </div>
+
+        <!-- Percentage / CGPA -->
+        <div class="mb-6">
+          <label class="text-sm text-gray-600 mb-2 block">Percentage / CGPA</label>
+          <input type="text"
+                 class="w-full p-3 bg-white border border-gray-300 rounded-lg text-sm focus:border-[#14B8A6] focus:ring-[#14B8A6] transition"
+                 placeholder="Enter your score">
+        </div>
+      </div>
+
+      <!-- Select Course -->
+      <div>
+        <label class="text-sm text-gray-600 block mb-2">Select Course</label>
+        <select id="course" class="w-full input-underline py-2 bg-transparent outline-none text-gray-700 text-sm">
+          <option value="" disabled selected>Select course</option>
+          <option>web-development</option>
+          <option>Graphic Designing</option>
+          <option>VideoEditing and Animations</option>
+          <option>Digital Marketing</option>
+          <option>E-Commerce Development</option>
+          <option>Basics of Computer</option>
+          <option>React</option>
+        </select>
+      </div>
+
+      <!-- Laptop Checkbox -->
+      <div class="mt-6 flex items-center gap-3">
+        <input type="checkbox" id="laptop"
+               class="w-4 h-4 text-[#14B8A6] border-gray-300 rounded focus:ring-[#14B8A6] cursor-pointer">
+        <label for="laptop" class="text-sm text-gray-700 cursor-pointer hover:text-[#14B8A6] transition">
+          I have a personal laptop
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full py-3 rounded-full text-white font-semibold text-sm shadow-md
+               bg-teal-500 transition hover:bg-teal-600 hover:shadow-xl active:scale-95">
+        SUBMIT APPLICATION
+      </button>
+    </form>
+  </section>
+</main>
+
+<script>
+  <!-- Admission Form Section -->
+  function handleAdmissionSubmit() {
+    const name = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const course = document.getElementById("course").value;
+
+    if (!name || !email || !phone || !course) {
+      return alert("Please fill all fields.");
+    }
+    alert("Admission form submitted successfully!");
+  }
+</script>
+
+</body>
+</html>

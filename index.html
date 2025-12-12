@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bano Qabil Sahiwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Bano Qabil Courses – Learn modern, in-demand skills for the future tech world, powered by Al-Khidmat Foundation.">
+    <meta name="keywords" content="Bano Qabil, Al-Khidmat, tech courses, coding, digital skills, Sahiwal, Pakistan">
+    <meta name="author" content="Bano Qabil">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bano Qabil Tech Skills Program" />
+    <meta property="og:description" content="Learn skills for the future and dominate the tech world." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+    <meta property="og:site_name" content="Bano Qabil" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  
+<style>
+html { scroll-behavior: smooth; }
+/* Banner Section */
+  /* Smooth Dropdown Animation */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fadeDown {
+      animation: fadeDown 0.25s ease-out;
+    }
+
+    /* Mobile slide menu */
+    @keyframes slideIn {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+    .slideIn {
+      animation: slideIn .3s ease-out;
+    }
+
+    /* --- ADDED ANIMATIONS & STYLES START --- */
+    @keyframes floatY {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Keyframes for the typing animation */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    .float { animation: floatY 4s ease-in-out infinite; }
+
+    /* subtle glass card (for future use on cards/elements) */
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Base Typing Effect Styles */
+    .typing-line {
+      display: block; 
+      overflow: hidden;
+      white-space: nowrap;
+      color: rgba(255, 255, 255, 0.9); 
+      font-size: 1.125rem; 
+      line-height: 1.75rem;
+      /* Define the cursor border here to be consistent */
+      border-right: 2px solid rgba(255,255,255,0.12); 
+    }
+
+    /* Simple Blink for Cursor */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: rgba(255,255,255,0.9) }
+    }
+
+    /* Typing Animation for the first line */
+    .typing-line-1 {
+      /* Runs typing animation for 3s, starts after 1s delay, then stops */
+      animation: typing 3s steps(30, end) 1s 1 normal both, 
+                 blink-caret 0.75s step-end infinite;
+      /* Stops the cursor after the typing animation finishes (3s + 1s delay) */
+      animation-delay: 1s, 4s;
+      animation-duration: 3s, 0.01s; 
+      animation-iteration-count: 1, 1;
+      animation-fill-mode: both, forwards;
+    }
+
+    /* Typing Animation for the second line */
+    .typing-line-2 {
+      /* Runs typing animation for 4.5s, starts after 4s delay, then stops */
+      animation: typing 4.5s steps(45, end) 4s 1 normal both, 
+                 blink-caret 0.75s step-end infinite;
+      /* Stops the cursor after the typing animation finishes (4.5s + 4s delay) */
+      animation-delay: 4s, 8.5s;
+      animation-duration: 4.5s, 0.01s;
+      animation-iteration-count: 1, 1;
+      animation-fill-mode: both, forwards;
+    }
+
+
+    /* Small responsive tweak for typing speed on small screens (speed up) */
+    @media (max-width:640px){ 
+      .typing-line-1{ 
+        animation-duration: 2s, 0.01s; 
+        animation-delay: 0.5s, 2.5s; /* Typing stops at 2.5s */
+      }
+      .typing-line-2{ 
+        animation-duration: 3s, 0.01s; 
+        animation-delay: 2.5s, 5.5s; /* Typing stops at 5.5s */
+      }
+    }
+
+    /* <!-- PARTNER SECTION --> */
+     /* Hidden before animation */
+.animate-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+
+.animate-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    /* Meet Our Staff Section */
+   .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 520px; /* Equal height to keep layout aligned */
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .flip-card-front {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #14b8a6;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .img-box {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 4px solid white;
+  }
+
+  .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-btn {
+    margin-top: 0.5rem;
+    background-color: #14b8a6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+/* <!-- contact section  */
+  /* Keyframes for Fade-in/Fade-up Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Keyframes for Focus Border Effect */
+    @keyframes focusGlow {
+      from { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.4); }
+      to { box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.4); }
+    }
+
+    /* Apply Animation to the entire section (for initial load fade-in) */
+    .contact-section-animate {
+      animation: fadeIn 1s ease-out 0.1s forwards;
+      opacity: 0; 
+    }
+
+    /* Custom Gradient Button Style */
+    .contact-gradient-button {
+      background: linear-gradient(90deg, #14B8A6, #06B6D4); /* Tailwind teal-500 to cyan-500 */
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(20, 184, 166, 0.3);
+    }
+    .contact-gradient-button:hover {
+      background: linear-gradient(90deg, #06B6D4, #14B8A6);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(20, 184, 166, 0.5);
+    }
+    
+    /* Input Field Focus Glow */
+    .contact-input:focus {
+        border-color: #14B8A6; /* Focus border color (Teal) */
+        outline: none;
+        animation: focusGlow 0.3s forwards;
+    }
+    
+    /* Hover effect for contact info items */
+    .contact-info-item:hover {
+        transform: translateX(5px);
+        color: #14B8A6;
+    }
+
+    /* --- CONTACT HEADER STYLES --- */
+    .contact-header {
+      /* 🌟 IMAGE SOURCE PATH INCLUDED HERE 🌟 */
+      background-image: url('/Assets/Images/Contact/Contact.jpeg'); 
+      background-size: cover;
+      background-position: center 20%; 
+      height: 40vh; 
+      min-height: 250px;
+    }
+    
+    /* Subtle overlay to make text readable */
+    .contact-header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(20, 183, 165, 0.1); 
+    }
+
+ /* Fade-in + slide-up animation */
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeSlideUp {
+      animation: fadeSlideUp 0.8s ease forwards;
+    }
+
+
+
+   /* <!-- Newsletter Section --> */
+  /* <!-- Custom Animations  */
+ 
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.9s ease-out forwards;
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+  /* // procedure */
+  /* BOOK CONTAINER */
+  .book-container {
+    perspective: 2000px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* PAGE */
+  .book-page {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform 1s ease, z-index 0s linear 1s;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .book-page { min-height: 350px; }
+  }
+
+  .book-page img {
+    height: auto;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  @media (max-width: 768px) {
+    .book-page img { max-height: 180px; }
+  }
+
+  /* FRONT & BACK */
+  .page-front, .page-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .page-front {
+    background-color: white;
+    z-index: 2;
+  }
+
+  .page-back {
+    background-color: #f0fdf4;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  /* FLIPPED STATE */
+  .book-page.flipped {
+    transform: rotateY(-180deg);
+    z-index: 0 !important;
+    transition: transform 1s ease;
+  }
+
+  /* SHADOW ON HOVER */
+  .book-page:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+
+   /* Time Table */
+    /* Bano Qabil button color */
+    .bq-btn {
+      background-color: #008C76;
+    }
+    .bq-btn:hover {
+      background-color: #008C76;
+    }
+
+
+        /* Footer Section */
+
+  /* Entry animation */
+        @keyframes fadeSlideUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeSlideUp { animation: fadeSlideUp 0.8s ease forwards; }
+
+        /* Fixed icon style */
+        .social-icon-fixed {
+            padding: 0.6rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 
+                        0 2px 4px -2px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: none;
+            width: 42px;
+            height: 42px;
+        }
+
+        .dropdown-menu-smooth {
+        /* Start state: Hidden and no height */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        opacity: 0;
+        visibility: hidden; /* Ensure it doesn't block clicks */
+    }
+
+    /* End state: Visible and full height */
+    .group:hover .dropdown-menu-smooth {
+        max-height: 500px; /* Needs to be larger than max content height */
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Custom style for the mobile menu transition */
+    .mobile-menu {
+        transition: transform 0.3s ease-out;
+        transform: translateX(100%); /* Start off-screen */
+    }
+    
+    .mobile-menu.open {
+        transform: translateX(0); /* Slide in */
+    }
+
+
+</style>
+</head>
+<body class="bg-gray-50">
+
+
+
+
+<header class="bg-white shadow sticky top-0 z-50 reveal">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <a href="#home" class="flex items-center z-20">
+            <img src="Images/logo.png" alt="Bano Qabil" class="h-12">
+            <span class="ml-3 font-bold text-xl text-teal-600">Bano Qabil Sahiwal</span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-6 font-medium">
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Home</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="/Welcome to Bano Qabil.html" class="block px-4 py-2 hover:bg-gray-100">Introduction</a>
+                    <a href="/our-partner.html" class="block px-4 py-2 hover:bg-gray-100">Our Partner</a>
+                    <a href="/Leadership.html" class="block px-4 py-2 hover:bg-gray-100">Leadership</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Faculty</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="courses.html" class="block px-4 py-2 hover:bg-gray-100">Courses</a>
+                    <a href="instructor.html" class="block px-4 py-2 hover:bg-gray-100">Instructor</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Admission</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="Procedure.html" class="block px-4 py-2 hover:bg-gray-100">Procedure</a>
+                    <a href="Admission.html" class="block px-4 py-2 hover:bg-gray-100">Admission Form</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <span>Students</span>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="Timetable.html" class="block px-4 py-2 hover:bg-gray-100">Time Table</a>
+                    <a href="merit-list.html" class="block px-4 py-2 hover:bg-gray-100">Merit List</a>
+                    <a href="QR-code-attendence/index.html" class="block px-4 py-2 hover:bg-gray-100">Attendance</a>
+                    <a href="#internship" class="block px-4 py-2 hover:bg-gray-100">Internship</a>
+                </div>
+            </div>
+
+            <div class="relative group reveal">
+                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
+                    <a href="news-API/index.html">
+
+                      <span>News</span>
+                    </a>
+                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
+                    <a href="#location" class="block px-4 py-2 hover:bg-gray-100">Location</a>
+                    <a href="#RegionalBranches" class="block px-4 py-2 hover:bg-gray-100">Regional Branches</a>
+                </div>
+            </div>
+
+            <a href="Contactus.html" class="reveal hover:text-teal-600 transition">Contact</a>
+            <button class="flex items-center gap-1 reveal hover:text-black transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <a href="Login.html">Login</a>
+            </button>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-teal-600 z-20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 pt-20 md:hidden z-10">
+        <div class="space-y-4 font-medium">
+            <a href="#home" class="block hover:text-teal-600">Home</a>
+            <a href="courses.html" class="block hover:text-teal-600">Courses</a>
+            <a href="instructor.html" class="block hover:text-teal-600">Faculty</a>
+            <a href="Admission.html" class="block hover:text-teal-600">Admission</a>
+            <a href="Timetable.html" class="block hover:text-teal-600">Students</a>
+            <a href="news-API/index.html" class="block hover:text-teal-600">News</a>
+            <a href="Contactus.html" class="block hover:text-teal-600">Contact</a>
+            <a href="Login.html" class="block bg-teal-600 text-white text-center py-2 rounded">Login</a>
+        </div>
+    </nav>
+</header>
+
+
+
+    <!-- Mobile Hamburger -->
+    <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-200">
+    <nav class="flex flex-col p-4 space-y-2">
+      <a href="#home" class="hover:text-teal-600 transition">Home</a>
+      <a href="#about" class="hover:text-teal-600 transition">About</a>
+
+      <!-- Mobile Departments Dropdown -->
+      <div class="flex flex-col">
+        <button class="flex justify-between items-center w-full hover:text-teal-600 transition" onclick="toggleMobileDropdown('deptDropdown')">
+          Departments
+          <svg class="w-4 h-4 transition-transform" id="deptDropdownIcon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="deptDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Computer Science</a>
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Information Technology</a>
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Business Studies</a>
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Engineering</a>
+        </div>
+      </div>
+
+      <a href="Procedure.html" class="hover:text-teal-600 transition">Admissions</a>
+      <a href="news-API/index.html" class="hover:text-teal-600 transition">News & Notices</a>
+      <a href="Contactus.html" class="hover:text-teal-600 transition">Contact</a>
+      <input type="text" placeholder="Search..." class="border border-gray-300 rounded-full px-3 py-1 text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500">
+    </nav>
+  </div>
+</header>
+
+<!-- /* Banner Section */ -->
+
+<section class="bg-gradient-to-r from-teal-400 to-blue-600 min-h-screen relative overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center min-h-screen h-full relative z-20">
+
+    <div class="text-white pr-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        ALKHIDMAT <br> Bano Qabil Pakistan
+      </h1>
+
+      <div class="mt-4 text-gray-100 text-lg">
+        <p>
+          Discover Skill That Shape Tomorrow.
+        </p>
+        <p >
+          Dive Into Our Most Popular Learning Path.
+        </p>
+      </div>
+
+      <button class="mt-8 bg-black text-white px-6 py-3 rounded-md transition duration-300 ease-in-out 
+                     hover:bg-indigo-600 hover:scale-105 flex items-center gap-2">
+        Stay Update. 
+      </button>
+    </div>
+
+    <div class="hidden md:block"></div>
+
+  </div>
+  
+  <div class="absolute top-0 right-10 h-full hidden md:block w-1/3 z-0">
+    <img src="Images/graa-removebg-preview.png"
+      class="h-full w-full object-cover"
+      alt="graduation">
+  </div>
+
+</section>
+
+<!-- PARTNER SECTION -->
+<section id="partner" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+    <!-- Heading -->
+    <h3 class="text-lg font-semibold text-teal-600 mb-1 animate-fade">
+      Our Partner
+    </h3>
+    <h2 class="text-3xl font-bold mb-10 animate-slide">
+      ALKHIDMAT FOUNDATION PAKISTAN
+    </h2>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 gap-10 items-center justify-center">
+
+      <!-- Logo Card -->
+      <div class="animate-up">
+        <div
+          class="bg-white shadow-lg rounded-xl p-8 hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <img src="Images/Alkhidmat.png" alt="Partner Logo" class="mx-auto w-56">
+          <p class="mt-4 text-sm font-medium text-gray-700">
+            ALKHIDMAT FOUNDATION PAKISTAN
+          </p>
+        </div>
+      </div>
+
+      <!-- Image Card -->
+      <div class="animate-up">
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+          <img src="Images/partner.png" alt="Partner Event" class="w-full h-64 object-cover">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- IntroductionSection -->
+<section id="IntroductionSection" class="py-16 md:py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 
+               text-[#14B8A6] transition duration-300 transform hover:scale-105 hover:shadow-lg 
+               block mx-auto w-fit 
+               animate-fade-up-1">
+      Welcome to Bano Qabil
+    </h1>
+    
+    <p class="text-base sm:text-lg text-gray-700 mb-6 max-w-4xl mx-auto animate-fade-up-2">
+      Bano Qabil is a free, youth-focused educational initiative by the Alkhidmat Foundation that provides advanced IT and digital skills training to help young people in Pakistan launch their careers. The program offers courses in high-demand fields like web development, graphic design, and digital marketing to empower individuals to find employment or start freelancing.
+      <br><br>
+       Purpose is to To empower the youth of Pakistan by providing them with free, advanced IT skills for career development and to contribute to the country's economic growth.The program is open to all youth, regardless of their background, with a specific focus on inclusivity for women and underprivileged students.Graduates are equipped with practical skills to either find jobs with partner companies, start their own businesses, or succeed as freelancers.
+    </p>
+    
+    <p class="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto animate-fade-up-3">
+      Our mission is to provide underprivileged students and women with **industry-relevant IT training**, helping them secure employment, start freelancing, and build a sustainable tech career.
+    </p>
+
+  </div>
+</section>
+
+
+    <!-- Meet Our Staff Section --> 
+<section class="bg-teal-500 py-16">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-white mb-4">Meet Our Staff</h2>
+    <p class="text-teal-100 text-lg mb-6">
+     <p class="text-teal-100 max-w-2xl-auto">
+      Our team of dedicated professionals is committed to providing the best education and support to help you succeed.
+    </p>
+    <p class="text-teal-100 max-w-2xl mx-auto">
+      From experienced instructors to expert coordinators, every member of our staff is here to guide, mentor, and inspire you.
+    </p>
+  </div>
+</section>
+
+<!-- Staff Cards -->
+
+
+<section class="relative bg-white py-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start justify-between">
+
+        <div class="lg:w-1/3 mb-10 lg:mb-0 lg:sticky lg:top-20">
+            <h2 class="text-4xl font-bold text-text-dark mb-4">
+                Instructors
+            </h2>
+            <p class="text-sm text-text-light max-w-xs mb-8">
+                At The Academy, We Strive To Bring Together The Professors For The Best Courses
+            </p>
+            
+            <button class="bg-teal-500 text-white py-3 px-6 rounded-lg font-medium shadow-md flex items-center hover:bg-teal-600 transition duration-150">
+                All Instructors
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="lg:w-2/3 relative flex justify-center lg:justify-end">
+
+            <div class="absolute inset-0 z-0 flex justify-center items-center">
+                <div class="w-full h-full bg-purple-50 absolute opacity-50" style="
+                    border-radius: 50% / 10%;
+                    transform: rotate(-2deg);
+                    top: 10%;
+                    left: 0;
+                "></div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6 relative z-10 w-full max-w-lg sm:max-w-none">
+                
+                <div class="text-center">
+                    <div class="w-full aspect-square overflow-hidden rounded-xl shadow-lg bg-orange-400">
+                          <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Umar Sajid" class="w-full h-full object-cover">
+                        <div class="w-full h-full"></div> 
+                    </div>
+                    <p class="text-sm font-semibold text-text-dark mt-3">Umar Sajid</p>
+                    <p class="text-xs text-text-light">Developer</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Sonia Arshad" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm font-semibold text-text-dark mt-3">Sonia Arshad</p>
+                    <p class="text-xs text-text-light">Graphic Designer</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Ali Hassan" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm font-semibold text-text-dark mt-3">Ali Hassan</p>
+                    <p class="text-xs text-text-light">Video Editor</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="M.Talha Saleem" class="w-full h-full object-cover">
+                    </div>
+                    <p class="https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D">M.Talha Saleem</p>
+                    <p class="text-xs text-text-light">Marketing Expert</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-full aspect-square overflow-hidden rounded-xl shadow-lg bg-yellow-400">
+                        <img src="https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Mirza Ehtisham" class="w-full h-full object-cover mix-blend-multiply opacity-80">
+                    </div>
+                    <p class="text-sm font-semibold text-text-dark mt-3">Mirza Ehtisham</p>
+                    <p class="text-xs text-text-light">Freelancer Expert</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://plus.unsplash.com/premium_photo-1673866484792-c5a36a6c025e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" alt="Hammad LLys" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm font-semibold text-text-dark mt-3">Hammad LLys</p>
+                    <p class="text-xs text-text-light">E-Commerce Expert</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+ <!-- All Courses Section -->
+  <section id="AllCoursesSection" class="py-20 bg-gray-50">
+    <div class="w-[85%] mx-auto">
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold text-[#14B8A6]">Our Courses</h2>
+        <p class="text-lg text-gray-600 mt-3">Explore the skills you can learn at Bano Qabil</p>
+      </div>
+
+      <!-- Courses Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Course 1 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/072/929/774/small/a-finger-touches-a-digital-screen-displaying-a-web-development-interface-with-icons-representing-coding-cloud-computing-database-and-website-design-symbolizing-innovation-and-technological-advancement-photo.jpg" alt="Web Development" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Web Development</h3>
+            <p class="text-gray-600 mb-6">Learn front-end & back-end development using modern technologies.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="Web Development"
+                      data-desc="Learn HTML, CSS, JavaScript, React, Node.js and build full-stack web applications.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4qyU8p_FyHIgyVRq-9G8bBDgP0Zgcuknx0A&s" alt="Graphic Designing" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Graphic Designing</h3>
+            <p class="text-gray-600 mb-6">Master Photoshop, Illustrator, and creative design skills.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="Graphic Designing"
+                      data-desc="Learn graphic designing with Photoshop, Illustrator, Figma, and other tools.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScL1aVvicZ5H3PHQTL8heg6fSXGPJ5qL4i4Q&s" alt="Video Editing & Animations" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Video Editing & Animations</h3>
+            <p class="text-gray-600 mb-6">Create stunning videos and animations using professional tools.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="Video Editing & Animations"
+                      data-desc="Learn video editing, motion graphics, and animation using Premiere Pro, After Effects, and more.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://courses.iid.org.in/public//uploads/media_manager/628.jpg" alt="Digital Marketing" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Digital Marketing</h3>
+            <p class="text-gray-600 mb-6">Become an expert in online marketing, SEO, and social media.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="Digital Marketing"
+                      data-desc="Learn SEO, Google Ads, Facebook marketing, and email marketing to grow businesses online.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkPpXQJhbnnGRwdwTTd4x8OVaitepGZe2ONw&s" alt="E-Commerce Development" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">E-Commerce Development</h3>
+            <p class="text-gray-600 mb-6">Build online stores using Shopify, WooCommerce, and more.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="E-Commerce Development"
+                      data-desc="Learn to create and manage e-commerce websites using Shopify, WooCommerce, and WordPress.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://pcilearning.com/wp-content/uploads/2015/06/computer_small_banner-3.jpg" alt="Basics of Computer" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Basics of Computer</h3>
+            <p class="text-gray-600 mb-6">Start from scratch and become proficient in computer basics.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="Basics of Computer"
+                      data-desc="Learn computer fundamentals, Microsoft Office, and essential computer skills.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://uploads.teachablecdn.com/attachments/SWtZL7dtR3SYRScauf7w_+1920x1357.jpg" alt="React" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">React</h3>
+            <p class="text-gray-600 mb-6">Build modern web applications using React.js and ecosystem tools.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="React"
+                      data-desc="Learn React.js, state management, hooks, routing, and building dynamic web apps.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 8 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYbsJFulTRg3kb36fs2oHH0rDX5C0uJ6HBDQ&s" alt="Python Programming" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Python Programming</h3>
+            <p class="text-gray-600 mb-6">Learn Python for web development, data science, and automation.</p>
+            <div class="text-center">
+              <button class="about-course-btn bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+                      data-title="Python Programming"
+                      data-desc="Master Python fundamentals, web frameworks, automation scripts, and data analysis.">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Modal -->
+  <div id="courseModal" class="hidden fixed inset-0 bg-black/50 z-50 items-center justify-center">
+    <div class="bg-white rounded-2xl p-6 max-w-lg mx-auto">
+      <h2 id="courseTitle" class="text-2xl font-bold mb-4"></h2>
+      <p id="courseDescription" class="text-gray-700 mb-6"></p>
+      <button onclick="closeCourseModal()" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">Close</button>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Leadership Section -->
+  <section id="LeadershipSection-Secondary" class="py-16 bg-gray-50">
+    <div class="w-[85%] mx-auto">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Leadership Team</h2>
+      <p class="text-lg text-gray-600 mb-12 text-center">Key Members - Bano Qabil Pakistan</p>
+
+      <!-- Flex for Cards -->
+      <div class="flex flex-col md:flex-row gap-8">
+
+       <div class="flex-1 bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <img src="https://static.wixstatic.com/media/4c4e63_98f6033d5ed8487f83ed584c903ad7bc~mv2.jpeg/v1/fill/w_640,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4c4e63_98f6033d5ed8487f83ed584c903ad7bc~mv2.jpeg" alt="Patron-in-Chief"
+        class="w-full h-64 object-cover">
+    <div class="p-6 flex flex-col flex-1 items-center text-center">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Hafiz Naeem ur Rehman</h3>
+        <p class="text-gray-600 mb-4">Patron-in-Chief, Bano Qabil Pakistan</p>
+        <button id="moreInfoBtn1-Secondary"
+            class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition w-max mt-auto">
+            More Info
+        </button>
+    </div>
+</div>
+
+<div class="flex-1 bg-gray-100 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <img src="https://alkhidmat.com/wp-content/uploads/2021/08/ak-event.jpg" alt="Chairman" 
+        class="w-full h-64 object-cover">
+    <div class="p-6 flex flex-col flex-1 items-center text-center">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Naveed Ali Baig</h3>
+        <p class="text-gray-600 mb-4">Chairman, Bano Qabil Pakistan</p>
+        <button id="moreInfoBtn2-Secondary"
+            class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition w-max mt-auto">
+            More Info
+        </button>
+    </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Newsletter Section -->
+<section class="max-w-7xl mx-auto py-24 px-6 animate-fade-up">
+  <div class="relative bg-gray-50 p-10 rounded-3xl overflow-hidden shadow-lg">
+
+    <!-- Right Background Shape -->
+    <div class="absolute right-0 inset-y-0 w-[320px] bg-teal-500 rounded-l-3xl"></div>
+
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold mb-6 max-w-2xl text-gray-800">
+      Find Out About The Latest Courses With The
+      <span class="text-teal-600">Bano Qabil</span> Newsletter
+    </h2>
+
+    <!-- Search Bar Positioned On Right with Animation -->
+    <div class="absolute right-10 top-1/2 -translate-y-1/2 w-[380px] animate-float">
+      <div class="relative w-full">
+
+        <input type="email"
+               placeholder="Email Address..."
+               class="w-full px-5 py-3 rounded-lg shadow-xl focus:outline-none bg-white 
+                      transition-all duration-300 hover:shadow-2xl" />
+
+        <button class="absolute right-1 top-1 bg-teal-600 text-white px-5 py-2 rounded-md text-sm 
+                       transition-all duration-300 hover:bg-teal-700 hover:scale-105">
+          SUBMIT
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Campus Location Section -->
+<section id="SahiwalMapSection" class="py-20 bg-gray-50">
+  <div class="w-[85%] mx-auto">
+
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-5xl font-extrabold text-[#14B8A6] tracking-wide">
+        BANO QABIL
+      </h2>
+      <div class="w-24 h-1 bg-[#14B8A6] mx-auto mt-3"></div>
+      <p class="text-xl mt-4 text-gray-700 font-medium">
+        Sahiwal Campus Location
+      </p>
+    </div>
+
+    <!-- Map Card -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden border border-gray-200">
+      <div class="w-full h-0 pb-[56.25%] relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3620.0000000000005!2d73.1000000!3d30.6667000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+          class="absolute top-0 left-0 w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Description -->
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">Bano Qabil – Sahiwal Center</h3>
+        <p class="text-gray-600 text-lg">
+          Use the interactive map above to find our official Bano Qabil Sahiwal campus.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer Section -->
+    <footer class="bg-gray-100 pt-14 pb-7 mt-20">
+        <h2 class="sr-only">Bano Qabil Footer Navigation</h2>
+
+        <!-- Responsive Grid -->
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+            <!-- Logo + About -->
+            <section>
+                <img src="Images/footer.png" alt="Bano Qabil Logo" class="h-14 mb-4">
+                <p class="text-gray-600 mb-4">
+                    Join Bano Qabil and get skilled to dominate the tech world.
+                </p>
+
+                <address class="not-italic space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-envelope text-gray-600 w-4"></i>
+                        <a href="mailto:info@alkhidmat.org" class="text-gray-700">info@alkhidmat.org</a>
+                    </div>
+
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-phone-alt text-gray-600 w-4"></i>
+                        <a href="tel:+923288888515" class="text-gray-700">+92 328 8888515</a>
+                    </div>
+                </address>
+            </section>
+
+            <!-- Quick Links -->
+            <nav aria-labelledby="quick-links-heading">
+                <h3 id="quick-links-heading" class="font-semibold text-gray-800 mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="transition-none">About</a></li>
+                    <li><a href="#" class="transition-none">Administration</a></li>
+                    <li><a href="#" class="transition-none">Faculty</a></li>
+                    <li><a href="#" class="transition-none">Admission</a></li>
+                    <li><a href="#" class="transition-none">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contact -->
+            <section>
+                <h3 class="font-semibold text-gray-800 mb-3">Contact</h3>
+
+                <address class="not-italic space-y-3">
+                    <p class="text-gray-600 mb-1">
+                        House 137, Fateh Sher Colony, Sahiwal, 57000
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-phone-alt text-gray-600 w-4"></i>
+                        <a href="tel:+923350800911" class="text-gray-700">+92 335 0800911</a>
+                    </div>
+                </address>
+            </section>
+
+            <!-- Legal -->
+            <nav aria-labelledby="legal-links-heading">
+                <h3 id="legal-links-heading" class="font-semibold text-gray-800 mb-3">Legal</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="transition-none">Privacy Policy</a></li>
+                    <li><a href="#" class="transition-none">Terms of Service</a></li>
+                    <li><a href="#" class="transition-none">Cookies Setting</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-end space-x-3 mt-10 px-6 max-w-7xl mx-auto animate-fadeSlideUp">
+
+            <a href="https://www.facebook.com/BanoQabil" target="_blank" aria-label="Facebook"
+                class="bg-blue-600 text-white social-icon-fixed">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/BanoQabil" target="_blank" aria-label="Instagram"
+                class="bg-pink-500 text-white social-icon-fixed">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@BanoQabil" target="_blank" aria-label="YouTube"
+                class="bg-red-600 text-white social-icon-fixed">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="https://twitter.com/BanoQabil" target="_blank" aria-label="Twitter"
+                class="bg-blue-400 text-white social-icon-fixed">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/company/BanoQabil" target="_blank" aria-label="LinkedIn"
+                class="bg-blue-700 text-white social-icon-fixed">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+        <hr class="my-8 border-gray-300 max-w-7xl mx-auto">
+
+        <!-- Copyright -->
+        <p class="text-center text-gray-600 text-sm">
+            © 2025, All rights reserved.
+        </p>
+    </footer>
+
+
+<script>
+  // Header
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  // Mobile dropdown toggle
+  function toggleMobileDropdown(id) {
+    const dropdown = document.getElementById(id);
+    const icon = document.getElementById(id + 'Icon');
+    dropdown.classList.toggle('hidden');
+    icon.classList.toggle('rotate-180');
+  }
+
+
+  // <!-- PARTNER SECTION -->
+  const items = document.querySelectorAll(".animate-up");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  items.forEach(el => observer.observe(el));
+
+
+      // <!-- All Courses Section -->
+      
+    document.addEventListener('DOMContentLoaded', function () {
+      const courseButtons = document.querySelectorAll('.about-course-btn');
+      courseButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const title = btn.getAttribute('data-title');
+          const desc = btn.getAttribute('data-desc');
+          document.getElementById('courseTitle').innerText = title;
+          document.getElementById('courseDescription').innerText = desc;
+          const modal = document.getElementById('courseModal');
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+      });
+    });
+
+    function closeCourseModal() {
+      const modal = document.getElementById('courseModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+     // Password Toggle
+  const pw = document.getElementById("password");
+  const eye = document.getElementById("eyeIcon");
+
+  document.getElementById("pwToggle").onclick = () => {
+    const show = pw.type === "password";
+    pw.type = show ? "text" : "password";
+
+    if (show) {
+      eye.innerHTML = `
+        <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18"/>
+        <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M10.58 10.58A3 3 0 0113.42 13.42"/>
+      `;
+    } else {
+      eye.innerHTML = `
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 0114 0z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+      `;
+    }
+  };
+
+
+   // <!-- Leadership Section -->
+     // Leadership Section toggle
+  document.getElementById('moreInfoBtn1-Secondary').addEventListener('click', function() {
+    document.getElementById('moreInfo1-Secondary').classList.toggle('hidden');
+  });
+
+  document.getElementById('moreInfoBtn2-Secondary').addEventListener('click', function() {
+    document.getElementById('moreInfo2-Secondary').classList.toggle('hidden');
+  });
+
+  // Courses modal
+  document.addEventListener('DOMContentLoaded', function () {
+    const courseButtons = document.querySelectorAll('.about-course-btn');
+    courseButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const title = btn.getAttribute('data-title');
+        const desc = btn.getAttribute('data-desc');
+        document.getElementById('courseTitle').innerText = title;
+        document.getElementById('courseDescription').innerText = desc;
+        const modal = document.getElementById('courseModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+  });
+
+  function closeCourseModal() {
+    const modal = document.getElementById('courseModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        button.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+
+        // Optional: Close menu when a link is clicked
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('open');
+            });
+        });
+    });
+
+</script>
+</body>
+</html>
