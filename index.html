@@ -439,8 +439,7 @@ html { scroll-behavior: smooth; }
 
 
 
-
-<header class="bg-white shadow sticky top-0 z-50 reveal">
+<header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
         <a href="#home" class="flex items-center z-20">
@@ -450,10 +449,10 @@ html { scroll-behavior: smooth; }
 
         <nav class="hidden md:flex items-center space-x-6 font-medium">
 
-            <div class="relative group reveal">
+            <div class="relative group">
                 <button class="flex items-center space-x-1 hover:text-teal-600 transition">
                     <span>Home</span>
-                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                     </svg>
                 </button>
@@ -464,10 +463,10 @@ html { scroll-behavior: smooth; }
                 </div>
             </div>
 
-            <div class="relative group reveal">
+            <div class="relative group">
                 <button class="flex items-center space-x-1 hover:text-teal-600 transition">
                     <span>Faculty</span>
-                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                     </svg>
                 </button>
@@ -477,10 +476,10 @@ html { scroll-behavior: smooth; }
                 </div>
             </div>
 
-            <div class="relative group reveal">
+            <div class="relative group">
                 <button class="flex items-center space-x-1 hover:text-teal-600 transition">
                     <span>Admission</span>
-                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                     </svg>
                 </button>
@@ -490,10 +489,10 @@ html { scroll-behavior: smooth; }
                 </div>
             </div>
 
-            <div class="relative group reveal">
+            <div class="relative group">
                 <button class="flex items-center space-x-1 hover:text-teal-600 transition">
                     <span>Students</span>
-                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
                     </svg>
                 </button>
@@ -505,39 +504,23 @@ html { scroll-behavior: smooth; }
                 </div>
             </div>
 
-            <div class="relative group reveal">
-                <button class="flex items-center space-x-1 hover:text-teal-600 transition">
-                    <a href="news-API/index.html">
+            <a href="news-API/index.html" class="hover:text-teal-600 transition">News</a>
 
-                      <span>News</span>
-                    </a>
-                    <svg class="dropdown-arrow w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md dropdown-menu-smooth z-10">
-                    <a href="#location" class="block px-4 py-2 hover:bg-gray-100">Location</a>
-                    <a href="#RegionalBranches" class="block px-4 py-2 hover:bg-gray-100">Regional Branches</a>
-                </div>
-            </div>
-
-            <a href="Contactus.html" class="reveal hover:text-teal-600 transition">Contact</a>
-            <button class="flex items-center gap-1 reveal hover:text-black transition">
+            <a href="Contactus.html" class="hover:text-teal-600 transition">Contact</a>
+            
+            <a href="Login.html" class="flex items-center gap-1 hover:text-black transition">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
-                <a href="Login.html">Login</a>
-            </button>
+                <span>Login</span>
+            </a>
         </nav>
 
-
-
-  <!-- Mobile Hamburger -->
-    <button id="mobileMenuBtn" class="md:hidden text-gray-700">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
+        <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
 
     </div>
 
@@ -553,42 +536,6 @@ html { scroll-behavior: smooth; }
             <a href="Login.html" class="block bg-teal-600 text-white text-center py-2 rounded">Login</a>
         </div>
     </nav>
-</header>
-
-
-
-  
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-200">
-    <nav class="flex flex-col p-4 space-y-2">
-      <a href="#home" class="hover:text-teal-600 transition">Home</a>
-      <a href="#about" class="hover:text-teal-600 transition">About</a>
-
-      <!-- Mobile Departments Dropdown -->
-      <div class="flex flex-col">
-        <button class="flex justify-between items-center w-full hover:text-teal-600 transition" onclick="toggleMobileDropdown('deptDropdown')">
-          Departments
-          <svg class="w-4 h-4 transition-transform" id="deptDropdownIcon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div id="deptDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
-          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Computer Science</a>
-          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Information Technology</a>
-          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Business Studies</a>
-          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Engineering</a>
-        </div>
-      </div>
-
-      <a href="Procedure.html" class="hover:text-teal-600 transition">Admissions</a>
-      <a href="news-API/index.html" class="hover:text-teal-600 transition">News & Notices</a>
-      <a href="Contactus.html" class="hover:text-teal-600 transition">Contact</a>
-      <input type="text" placeholder="Search..." class="border border-gray-300 rounded-full px-3 py-1 text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500">
-    </nav>
-  </div>
 </header>
 
 <!-- /* Banner Section */ -->
@@ -1315,3 +1262,4 @@ html { scroll-behavior: smooth; }
 </script>
 </body>
 </html>
+
