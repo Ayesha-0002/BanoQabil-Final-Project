@@ -121,6 +121,11 @@
   <title>Contact</title>
 </head>
 <body>
+
+
+
+
+
 <header class="bg-white shadow sticky top-0 z-50 reveal">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
@@ -211,11 +216,14 @@
             </button>
         </nav>
 
-        <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-teal-600 z-20">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-            </svg>
-        </button>
+
+
+  <!-- Mobile Hamburger -->
+    <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
     </div>
 
@@ -231,6 +239,42 @@
             <a href="Login.html" class="block bg-teal-600 text-white text-center py-2 rounded">Login</a>
         </div>
     </nav>
+</header>
+
+
+
+  
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-200">
+    <nav class="flex flex-col p-4 space-y-2">
+      <a href="#home" class="hover:text-teal-600 transition">Home</a>
+      <a href="#about" class="hover:text-teal-600 transition">About</a>
+
+      <!-- Mobile Departments Dropdown -->
+      <div class="flex flex-col">
+        <button class="flex justify-between items-center w-full hover:text-teal-600 transition" onclick="toggleMobileDropdown('deptDropdown')">
+          Departments
+          <svg class="w-4 h-4 transition-transform" id="deptDropdownIcon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="deptDropdown" class="hidden flex-col pl-4 mt-1 space-y-1">
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Computer Science</a>
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Information Technology</a>
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Business Studies</a>
+          <a href="#AllCoursesSection" class="hover:text-teal-600 transition">Engineering</a>
+        </div>
+      </div>
+
+      <a href="Procedure.html" class="hover:text-teal-600 transition">Admissions</a>
+      <a href="news-API/index.html" class="hover:text-teal-600 transition">News & Notices</a>
+      <a href="Contactus.html" class="hover:text-teal-600 transition">Contact</a>
+      <input type="text" placeholder="Search..." class="border border-gray-300 rounded-full px-3 py-1 text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500">
+    </nav>
+  </div>
 </header>
 
 <section id="/Contact-Us">
@@ -468,4 +512,5 @@
         </p>
     </footer>
 </body>
+
 </html>
